@@ -1,3 +1,4 @@
 # bootcamp
 
-Teaching myself JavaScript
+
+Teaching myself the ins and outs of JavaScript
