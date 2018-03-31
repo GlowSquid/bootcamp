@@ -87,6 +87,9 @@ console.log(square(15))
 
 console.log("Factorial")
 function factorial(num) {
+  if(num === 0) {
+    return "!0 = 1";
+  }
   let total = 1;
   for(let i = 1; i <= num; i +=1 ){
     if(i >= num){
@@ -97,7 +100,7 @@ function factorial(num) {
   }
 }
 
-console.log(factorial(5))
+console.log(factorial(0))
 
 
 // Shorter, but not mine:
