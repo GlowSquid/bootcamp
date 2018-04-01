@@ -41,6 +41,7 @@ console.log(copyAll);
 
 const numbers = [22, 67, 33, 96, 88];
 console.log(numbers[numbers.length]) // undefined
+console.log(numbers[numbers.length -1]) // 88
 
 const groups = [
   ["first", "group"],
@@ -54,3 +55,18 @@ const parent = [
 ]
 
 console.log(parent[0][1][1][1][1][1][0])
+
+// arr.forEach(someFunction)
+
+const minerals = ["diamond", "amathyst", "ruby", "topaz"];
+minerals.forEach(function(minerals){
+  console.log(minerals);
+});
+
+const manyNums = [12, 34, 56, 78, 90, 1011]
+
+manyNums.forEach(function(isNum){
+  if(isNum% 3 === 0) {
+    console.log(isNum);
+  }
+});
