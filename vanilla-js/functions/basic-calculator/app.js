@@ -17,11 +17,12 @@ console.log(signChecker(0))
 
 console.log("Check if number is even or odd")
 function parityChecker(num) {
-  if(num % 2 === 0){
-    return `${num} is even`
-  } else {
-    return `${num} is odd`
-  }
+  // if(num % 2 === 0){
+  //   return `${num} is even`
+  // } else {
+  //   return `${num} is odd`
+  // }
+  return num % 2 === 0 ? `${num} is even` : `${num} is odd`;
 }
 
 console.log(parityChecker(4))

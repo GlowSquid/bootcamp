@@ -5,7 +5,7 @@ const lookMom = new Array() // uncommon
 const momLook = [];
 
 // types of data
-const randomThings = [49, true, "hello", null];
+const randomThings = [49, true, "hello", null, {a: "android", b: "blog"}];
 
 const nums = [5, 39, 922, 14]
 console.log("nums length:", nums.length)
@@ -65,8 +65,67 @@ minerals.forEach(function(minerals){
 
 const manyNums = [12, 34, 56, 78, 90, 1011]
 
-manyNums.forEach(function(isNum){
-  if(isNum% 3 === 0) {
-    console.log(isNum);
+manyNums.forEach(function(x){
+  if(x% 3 === 0) {
+    console.log(x);
   }
+});
+
+
+function reverse(arr) {
+  for(let i = arr.length -1; i >= 0; i-=1){
+    console.log(arr[i]);
+  }
+}
+reverse([1,2,3,4])
+
+
+// isUniform
+
+function isUniform(arr){
+  const first = arr[0];
+  for(let i = 0; i < arr.length; i+=1){
+    if(arr[i] !== first){
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(isUniform([4, 4, 4 ,4]))
+
+
+// sumArray
+
+function sumArray(arr){
+  let total = 0;
+  arr.forEach(function(element){
+    total += element;
+  });
+  return total;
+}
+
+console.log(sumArray([2, 3, 5]))
+
+
+// max
+
+function max(arr){
+  let max = arr[0];
+  for(let i = 1;  i < arr.length; i+=1){
+    if(arr[i] > max){
+      max = arr[i];
+    }
+  }
+  return max;
+}
+
+console.log(max([-100, 4, 30]))
+
+
+// forEach
+
+let colors = ["red", "orange", "yellow", "green"];
+colors.forEach(function(color){
+  console.log(color);
 });

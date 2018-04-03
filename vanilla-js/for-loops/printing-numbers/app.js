@@ -1,4 +1,5 @@
 
+console.log("List each character")
 
 var str = "What's Up";
 var count = 0;
@@ -40,3 +41,20 @@ for(let count = 5; count <= 50; count+=1){
     console.log(count);
   }
 }
+
+
+console.log("Count the Vowels")
+
+function countVowels(str){
+  const vowels = "aeiou";
+  let counter = 0;
+  for(let i=0; i<str.length; i++){
+    if(vowels.includes(str[i])) {
+      counter++;
+    }
+  }
+
+  return `Number of vowels: ${counter}`;
+}
+
+console.log(countVowels("The quick brown fox jumps over the lazy dog"))
