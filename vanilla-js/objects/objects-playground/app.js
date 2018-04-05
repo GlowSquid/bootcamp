@@ -9,6 +9,9 @@ const pet = {
   isCat: false,
   speak: function() {
     return "woof";
+  },
+  multiply: function(x, y){
+    return x * y
   }
 }
 
@@ -23,6 +26,7 @@ pet.breed = "Poodle";
 
 let extra = "dog years"
 pet[extra] = 35;
+console.log(pet.multiply(5, 6))
 
 // Limitations
 

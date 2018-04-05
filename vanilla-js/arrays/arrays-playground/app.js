@@ -108,8 +108,7 @@ function sumArray(arr){
 console.log(sumArray([2, 3, 5]))
 
 
-// max
-
+// Find largest number in an array
 function max(arr){
   let max = arr[0];
   for(let i = 1;  i < arr.length; i+=1){
@@ -121,6 +120,20 @@ function max(arr){
 }
 
 console.log(max([-100, 4, 30]))
+
+
+// Find smallest number in an array
+function min(arr){
+  let min = arr[0];
+  for(let i = 1; i < arr.length; i+=1){
+    if(arr[i] < min){
+      min = arr[i];
+    }
+  }
+  return min;
+}
+
+console.log(min([-100, 4, 30]))
 
 
 // forEach
