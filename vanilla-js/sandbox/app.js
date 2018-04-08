@@ -73,6 +73,7 @@ val = firstName.substring(0, 3)
 
 // Slice
 val = firstName.slice(-4);
+val = firstName.slice(1, -1); // Slice first & last character
 
 // Split
 const str = "the quick brown fox jumps over the lazy dog";

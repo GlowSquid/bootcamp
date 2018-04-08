@@ -19,9 +19,8 @@ console.log("Check if number is even or odd")
 function parityChecker(num) {
   // if(num % 2 === 0){
   //   return `${num} is even`
-  // } else {
-  //   return `${num} is odd`
-  // }
+  //  }
+  //  return `${num} is odd`
   return num % 2 === 0 ? `${num} is even` : `${num} is odd`;
 }
 
@@ -75,15 +74,26 @@ console.log(divide(-5, 2));
 console.log(divide(43, 216));
 
 
+console.log("Multi Operations")
+function operations(x, a, b) {
+  return `${a} ${x} ${b} = ${eval(a+x+b)}`
+}
+
+console.log(operations("+", 4, 5))
+console.log(operations("-", 2, 4))
+console.log(operations("*", -5, 2))
+console.log(operations("/", 43, 216))
+
+
 console.log("Square")
 function square(num) {
   return `${num} * ${num} = ${num*num}`
 }
 
-console.log(square(5))
-console.log(square(4))
-console.log(square(3))
-console.log(square(15))
+console.log(square(5));
+console.log(square(4));
+console.log(square(3));
+console.log(square(15));
 
 
 console.log("Factorial")
