@@ -1,8 +1,4 @@
 
-// const btn = document.querySelector("button");
-// btn.style.color = "#3C3564";
-
-
 const p1Btn = document.querySelector("#p1");
 const p2Btn = document.getElementById("p2");
 const h2 = document.querySelector("h2");
