@@ -56,10 +56,6 @@ guessBtn.addEventListener("click", function(){
         
       }
     }
-
-
-
-    
   }
 });
 
