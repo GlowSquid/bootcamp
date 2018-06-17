@@ -96,20 +96,23 @@ h1:active{
   justify-content: center;
 }
 
-p{
+p.fun{
+  background-color: none;
   margin: 4px;
   display: inline-block;
   height: 15px;
   width: 15px;
   border: 1px solid red;
   color: red;
-  box-shadow: 0px 2px 2px
+  box-shadow: 0px 2px 2px;
+  opacity: 0.5;
   
   }
 
-p:hover{
-  background-color: fuchsia;
+.fun:hover{
   border-radius: 2px;
+  opacity: 1;
+  transition-duration: 0.2s;
 }
 
 p#one:hover{
@@ -156,3 +159,28 @@ p#nine:hover{
   background-color: rgb(255, 255, 240);
   transform: scale(1.9)
 }
+
+p.box{
+  width: 40px;
+  height: 40px;
+  background-color: greenyellow;
+  color: brown;
+  border: 2px solid black;
+}
+
+p.transformed {
+  background-color: fuchsia;
+  transform-origin: 0 0;
+  transform: rotate(-45deg)
+}
+
+p.animated:hover{
+  transition-property: transform, border-radius;
+  transition-duration: 2s, 3s;
+  background-color: red;
+  transform:scale(1.5) rotate(45deg);
+  opacity: 0.5;
+  border-radius: 10px;
+  transition-delay: 2s, 1s;
+}
+
