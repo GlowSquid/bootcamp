@@ -1,3 +1,4 @@
 node_modules/
 *package-lock.json
 mern/devconnector/config/
+mern/devconnector/client/src/components/profile/ProfileGithub.js
