@@ -171,7 +171,7 @@ router.post(
           text: req.body.text,
           name: req.body.name,
           avatar: req.body.avatar,
-          user: req.unpipe.id
+          user: req.user.id
         };
 
         // Add to comments array
@@ -180,7 +180,7 @@ router.post(
         // Save
         post.save().then(post => res.json(post));
       })
-      .catch(err => res.send(404).json({ postnotfound: "No post found" }));
+      .catch(err => res.status(404).json({ postnotfound: "No post found" }));
   }
 );
 
