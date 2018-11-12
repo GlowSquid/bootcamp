@@ -83,9 +83,7 @@ router.delete(
           // Delete
           post.remove().then(() => res.json({ success: true }));
         })
-        .catch(err =>
-          releaseEvents.status(404).json({ postnotfound: "No post found" })
-        );
+        .catch(err => res.status(404).json({ postnotfound: "No post found" }));
     });
   }
 );
@@ -195,7 +193,7 @@ router.delete(
   (req, res) => {
     Post.findById(req.params.id)
       .then(post => {
-        // Check if comment exists
+        // Check to see if comment exists
         if (
           post.comments.filter(
             comment => comment._id.toString() === req.params.comment_id
@@ -203,20 +201,20 @@ router.delete(
         ) {
           return res
             .status(404)
-            .json({ nocommentexists: "Comment does not exist" });
+            .json({ commentnotexists: "Comment does not exist" });
         }
 
         // Get remove index
         const removeIndex = post.comments
           .map(item => item._id.toString())
-          .indexOf(req.param.comment_id);
+          .indexOf(req.params.comment_id);
 
         // Splice comment out of array
         post.comments.splice(removeIndex, 1);
 
         post.save().then(post => res.json(post));
       })
-      .catch(err => res.send(404).json({ postnotfound: "No post found" }));
+      .catch(err => res.status(404).json({ postnotfound: "No post found" }));
   }
 );
 
