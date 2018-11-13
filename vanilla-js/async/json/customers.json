@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Satya",
+    "company": "Microsoft",
+    "phone": "800-892-5234"
+  },
+  {
+    "id": 2,
+    "name": "Tim",
+    "company": "Apple",
+    "phone": "800-275-2273"
+  },
+  {
+    "id": 3,
+    "name": "Linus",
+    "company": "Linux Foundation",
+    "phone": "415-723-9709"
+  }
+]
