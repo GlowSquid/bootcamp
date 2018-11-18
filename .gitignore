@@ -1,3 +1,4 @@
 node_modules/
 *package-lock.json
 mern/devconnector/config/keys_dev.js
+vanilla-js/github-finder/github.js
