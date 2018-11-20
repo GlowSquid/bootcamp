@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import "../css/styles.css";
+import React, { Component } from 'react';
+import '../css/styles.css';
 
 // const getYear = () => {
 //   const newDate = new Date();
@@ -21,9 +21,19 @@ import "../css/styles.css";
 // };
 
 class Header extends Component {
-  inputChangeHandler(e) {
-    console.log(e.target.value);
-  }
+  state = {
+    active: false,
+    keywords: 'Hello'
+  };
+
+  inputChangeHandler = e => {
+    // console.log(e.target.value);
+    const value = e.target.value === '' ? false : true;
+    this.setState({
+      active: value,
+      keywords: e.target.value
+    });
+  };
 
   render() {
     // const styles = {
@@ -34,8 +44,10 @@ class Header extends Component {
     // };
 
     return (
-      <header>
-        <div id="logo">Logo</div>
+      <header
+        style={{ background: `${this.state.active ? 'blue' : '#03a9f4'} ` }}
+      >
+        <div id="logo">NewsFinder</div>
         <input type="text" onChange={this.inputChangeHandler} />
       </header>
     );
