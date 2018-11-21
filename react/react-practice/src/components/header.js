@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import '../css/styles.css';
+import React from 'react';
+import classes from '../css/.module.css';
 
 // const getYear = () => {
 //   const newDate = new Date();
@@ -20,38 +20,38 @@ import '../css/styles.css';
 // );
 // };
 
-class Header extends Component {
-  state = {
-    active: false,
-    keywords: 'Hello'
-  };
+// class Header extends Component {
+//   state = {
+//     active: false,
+//     keywords: 'Hello'
+//   };
 
-  inputChangeHandler = e => {
-    // console.log(e.target.value);
-    const value = e.target.value === '' ? false : true;
-    this.setState({
-      active: value,
-      keywords: e.target.value
-    });
-  };
+//   inputChangeHandler = e => {
+//     // console.log(e.target.value);
+//     const value = e.target.value === '' ? false : true;
+//     this.setState({
+//       active: value,
+//       keywords: e.target.value
+//     });
+//   };
 
-  render() {
-    // const styles = {
-    //   logo: {
-    //     fontFamily: "Lato",
-    //     textAlign: "center"
-    //   }
-    // };
+//   render() {
+//     // const styles = {
+//     //   logo: {
+//     //     fontFamily: "Lato",
+//     //     textAlign: "center"
+//     //   }
+//     // };
 
-    return (
-      <header
-        style={{ background: `${this.state.active ? 'blue' : '#03a9f4'} ` }}
-      >
-        <div id="logo">NewsFinder</div>
-        <input type="text" onChange={this.inputChangeHandler} />
-      </header>
-    );
-  }
-}
+const Header = props => {
+  return (
+    <header
+    // style={{ background: `${this.state.active ? 'blue' : '#03a9f4'} ` }}
+    >
+      <div className={classes.logo}>NewsFinder</div>
+      <input type="text" onChange={props.keywords} />
+    </header>
+  );
+};
 
 export default Header;
