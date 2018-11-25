@@ -1,24 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Card from '../hoc/card';
+import Auth from '../hoc/auth';
+
 const Profile = props => {
-  const redir = () => {
-    props.history.push('/posts/over9000');
-  };
+  // const redir = () => {
+  // props.history.push('/posts/over9000');
+  // };
 
   return (
-    <div>
-      <h1>Hey</h1>
-      <Link
-        to={{
-          pathname: `${props.match.url}/posts`
-        }}
-      >
-        Take me to /profile/posts
-      </Link>
+    <Auth>
+      <Card>
+        <Link
+          to={{
+            pathname: `${props.match.url}/posts`
+          }}
+        >
+          Take me to /profile/posts
+        </Link>
 
-      {redir()}
-    </div>
+        {/* {redir()} */}
+      </Card>
+    </Auth>
   );
 };
 

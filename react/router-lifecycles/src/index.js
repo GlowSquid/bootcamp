@@ -15,6 +15,7 @@ import PostItem from './components/postItem';
 import Profile from './components/profile';
 import LifeCycles from './components/lifecycles';
 import Conditional from './components/conditional';
+import User from './components/user';
 
 const App = () => {
   return (
@@ -45,6 +46,8 @@ const App = () => {
           <br />
           <NavLink to="/conditional">Conditional</NavLink>
           <br />
+          <NavLink to="/user">User</NavLink>
+          <br />
           <hr />
         </header>
         <Switch>
@@ -54,6 +57,7 @@ const App = () => {
           <Route path="/lifecycles" component={LifeCycles} />
           <Route path="/conditional" component={Conditional} />
           <Route path="/" exact component={Home} />
+          <Route path="/user" exact component={User} />
           {/* <Route render={() => <h3>Oops 404 - Page Not Found</h3>} /> */}
           <Route component={Posts} />
         </Switch>
