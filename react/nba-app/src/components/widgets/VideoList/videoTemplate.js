@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import CardInfo from '../CardInfo/cardInfo';
 import style from './videoList.module.css';
@@ -14,7 +14,7 @@ const VideoTemplate = props => {
               background: `url(/images/videos/${item.image})`
             }}
           >
-            <div>kek</div>
+            <div />
           </div>
           <div className={style.right}>
             <CardInfo teams={props.teams} team={item.team} date={item.date} />
