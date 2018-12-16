@@ -86,9 +86,34 @@ re = /Hel{2,}o/i;
 // Parentheses () - Grouping
 re = /^([0-9]x){3}$/;
 
+// Shorthand Character Classes
+// Word Character - alphanumeric character or _
+re = /\w/;
+// - + = one or more
+re = /\w+/;
+// Non-Word Characters
+re = /\W/;
+// Matches any digit 0 or more times
+re = /\d/;
+// Matches any Non-Digits
+re = /\D/;
+// Matches whitespace characters
+re = /\s/;
+// Matches non-whitespace characters
+re = /\S/;
+// Word Boundary
+re = /Hell\b/i;
+// Assertions
+// Match x only if followed by y
+re = /x(?=y)/;
+// Match x only if NOT followed by y
+re = /x(?!y)/;
+
 // String to match
 // const str = 'Helllllo';
-const str = '2x3x4x';
+// const str = '2x3x4x';
+// const str = 'Hello welcome to Hell';
+const str = 'zyxxyz';
 
 // Log result
 const result = re.exec(str);
