@@ -2,26 +2,55 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #8e003b;
+}
+
+.animated {
+  color: #fff;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  font-family: 'Charm', cursive;
+  font-size: 5rem;
+  text-shadow: 1px 1px 50px #ff000080;
+  background: url('./img/text-bg.png');
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: moveBg 90s linear infinite;
+  -webkit-animation: moveBg 90s linear infinite;
+}
+
+@keyframes moveBg {
+  0% {
+    background-position: 0% 30%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 .btn-start {
   background-color: #c29151;
   color: white;
   font-size: 18px;
   border: 2px solid #9140aa;
   border-radius: 10px;
-  margin: 15px auto;
+  margin: 0 auto;
   display: block;
   width: 12rem;
   height: 2rem;
 }
 
 .container {
-  width: 800px;
-  height: 900px;
-  border: 5px solid #1c0020;
+  width: 600px;
+  height: 700px;
+  border: 2px solid #1c0020;
   margin: 15px auto;
   background-image: url('./img/calendar.png');
   background-size: cover;
-  box-shadow: 6px 6px 20px grey;
+  box-shadow: 3px 3px 10px #000;
   display: grid;
   grid-template-columns: repeat(4, 25%);
   grid-template-rows: repeat(6, 1fr);
