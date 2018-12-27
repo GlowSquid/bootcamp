@@ -3,3 +3,4 @@ node_modules/
 *package-lock.json
 vanilla-js/github-finder/github.js
 react/devconnector/config/keys_dev.js
+react/forms/src/firebase.js
