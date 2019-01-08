@@ -17,7 +17,6 @@ const myObj = {};
 myObj[KEY1] = 'prop1';
 myObj[KEY2] = 'prop2';
 myObj.KEY3 = 'prop3';
-// myObj[KEY3] = 'prop3';
 myObj.KEY4 = 'prop4';
 
 // console.log(myObj[KEY2]);
@@ -28,5 +27,5 @@ for (let i in myObj) {
 }
 
 // Symbols are ignored by JSON.stringify
-console.log(JSON.stringify({ key: 'sym' }));
-console.log(JSON.stringify({ [Symbol('sym1')]: 'sym' }));
+console.log(JSON.stringify({ key: 'foo' }));
+console.log(JSON.stringify({ [Symbol('sym1')]: 'foo' }));
