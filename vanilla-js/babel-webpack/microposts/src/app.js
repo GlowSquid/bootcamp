@@ -45,7 +45,7 @@ function submitSwear() {
     if (id === '') {
       http
         .post('http://localhost:3000/swears', data)
-        .then(data => {
+        .then(() => {
           ui.showAlert('New Swear added', 'alert alert-success');
           ui.clearFields();
           getSwears();
@@ -54,7 +54,7 @@ function submitSwear() {
     } else {
       http
         .put(`http://localhost:3000/swears/${id}`, data)
-        .then(data => {
+        .then(() => {
           ui.showAlert('Swear Updated', 'alert alert-success');
           ui.changeFormState('add');
           getSwears();
@@ -71,7 +71,7 @@ function deletePost(e) {
     if (confirm('Are you sure')) {
       http
         .delete(`http://localhost:3000/swears/${id}`)
-        .then(data => {
+        .then(() => {
           ui.showAlert('Swear removed', 'alert alert-success');
           getSwears();
         })
@@ -85,10 +85,10 @@ function deletePost(e) {
 function enableEdit(e) {
   if (e.target.parentElement.classList.contains('edit')) {
     const id = e.target.parentElement.dataset.id;
-    title =
+    let title =
       e.target.parentElement.previousElementSibling.previousElementSibling
         .textContent;
-    body = e.target.parentElement.previousElementSibling.textContent;
+    let body = e.target.parentElement.previousElementSibling.textContent;
 
     const data = {
       id,
