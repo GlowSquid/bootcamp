@@ -1,0 +1,19 @@
+{
+  "swears": [
+    {
+      "id": 1,
+      "title": "Swear One",
+      "body": "Fucktard Dingleberries"
+    },
+    {
+      "id": 2,
+      "title": "Swear Two",
+      "body": "Florem fipsum fdolor fsit famet"
+    },
+    {
+      "title": "Swear Three",
+      "body": "%&(/%",
+      "id": 3
+    }
+  ]
+}

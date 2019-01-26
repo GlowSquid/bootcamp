@@ -1,6 +1,7 @@
 .vscode/
 .next/
 node_modules/
+build/
 *package-lock.json
 vanilla-js/github-finder/github.js
 react/devconnector/config/keys_dev.js
