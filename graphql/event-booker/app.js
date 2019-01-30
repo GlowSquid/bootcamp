@@ -1,16 +1,14 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const graphqlHttp = require('express-graphql');
 const { buildSchema } = require('graphql');
 
+const Event = require('./models/event');
+
 const app = express();
 
-const events = [];
-
 app.use(bodyParser.json());
-app.get('/', (req, res, next) => {
-  res.send('Hello Express');
-});
 
 app.use(
   '/graphql',
@@ -46,23 +44,51 @@ app.use(
   `),
     rootValue: {
       events: () => {
-        return events;
+        return Event.find()
+          .then(events => {
+            return events.map(event => {
+              return { ...event._doc };
+              // return { ...event._doc, _id: event._doc._id.toString() };
+            });
+          })
+          .catch(err => {
+            throw err;
+          });
       },
       createEvent: args => {
-        const event = {
-          _id: Math.random().toString(),
+        const event = new Event({
           title: args.eventInput.title,
           description: args.eventInput.description,
           price: +args.eventInput.price,
-          date: args.eventInput.date
-        };
-        console.log(args);
-        events.push(event);
-        return event;
+          date: new Date(args.eventInput.date)
+        });
+        return event
+          .save()
+          .then(result => {
+            console.log(result);
+            return { ...result._doc };
+            // return { ...result._doc, _id: event._doc._id.toString() };
+          })
+          .catch(err => {
+            console.log(err);
+            throw err;
+          });
       }
     },
     graphiql: true // use for debug only
   })
 );
 
-app.listen(5002);
+mongoose
+  .connect(
+    `mongodb://${process.env.MONGO_USER}:${
+      process.env.MONGO_PASSWORD
+    }@localhost:27017/${process.env.MONGO_DB}?retryWrites=true`,
+    // 'mongodb://localhost:27017/eb?retryWrites=true',
+    { useNewUrlParser: true }
+  )
+  .then(() => {
+    // ('MongoDB works');
+    app.listen(5002);
+  })
+  .catch(err => console.log(err));
