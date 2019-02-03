@@ -6,4 +6,4 @@ build/
 vanilla-js/github-finder/github.js
 react/devconnector/config/keys_dev.js
 react/forms/src/firebase.js
-graphql/event-booker/nodemon.json
+graphql/event-booker/server/nodemon.json
