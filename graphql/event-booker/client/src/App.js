@@ -5,18 +5,23 @@ import './App.css';
 import AuthPage from './pages/Auth';
 import BookingsPage from './pages/Bookings';
 import EventsPage from './pages/Events';
+import NavBar from './components/Navigation/NavBar';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Switch>
-          {/* <h1>Event Booker =></h1> */}
-          <Redirect from="/" to="/auth" exact />
-          <Route path="/auth" component={AuthPage} />
-          <Route path="/events" component={EventsPage} />
-          <Route path="/bookings" component={BookingsPage} />
-        </Switch>
+        <React.Fragment>
+          <NavBar />
+          <main className="main-content">
+            <Switch>
+              <Redirect from="/" to="/auth" exact />
+              <Route path="/auth" component={AuthPage} />
+              <Route path="/events" component={EventsPage} />
+              <Route path="/bookings" component={BookingsPage} />
+            </Switch>
+          </main>
+        </React.Fragment>
       </BrowserRouter>
     );
   }

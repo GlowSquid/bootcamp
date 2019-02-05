@@ -1,0 +1,42 @@
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 3rem;
+  background: #b17300;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.navbar__items {
+  margin-left: 1.5rem;
+}
+
+.navbar__items ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar__items li {
+  margin: 0 0.8rem;
+}
+
+.navbar__items a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar__items a:hover,
+.navbar__items a:active,
+.navbar__items a.active {
+  color: #c4ff8c;
+}
