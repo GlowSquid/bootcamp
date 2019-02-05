@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 
 import './Auth.css';
+import AuthContext from '../context/auth-context';
 
 class AuthPage extends Component {
   state = {
     isLogin: true
   };
+
+  static contextType = AuthContext;
 
   constructor(props) {
     super(props);
@@ -77,7 +80,13 @@ class AuthPage extends Component {
         return res.json();
       })
       .then(resData => {
-        console.log(resData);
+        if (resData.data.login.token) {
+          this.context.login(
+            resData.data.login.token,
+            resData.data.login.userId,
+            resData.data.login.tokenExpiration
+          );
+        }
       })
       .catch(err => {
         console.log(err);
@@ -100,14 +109,16 @@ class AuthPage extends Component {
         </div>
 
         <div className="form-actions">
-          <button className="submit">Submit</button>
+          <button className="submit">
+            {this.state.isLogin ? 'Log in' : 'Sign Up'}
+          </button>
           {/* <button type="button" onClick={this.switchModeHandler}>
             {this.state.isLogin ? 'Sign up?' : 'Log in?'}
           </button> */}
           <p>
             Or were you looking to{' '}
             <strong onClick={this.switchModeHandler}>
-              <u>{this.state.isLogin ? 'sign up' : 'log in'}</u>?
+              {this.state.isLogin ? 'sign up' : 'log in'}?
             </strong>
           </p>
         </div>
