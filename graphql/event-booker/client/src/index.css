@@ -5,6 +5,8 @@ body {
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* .form-control label, */
+.form-control textarea,
 .form-control input {
   width: 100%;
   background: #fff;
@@ -17,6 +19,8 @@ body {
 
 .form-control label {
   margin-bottom: 0.5rem;
+  width: 100%;
+  display: block;
 }
 
 .form-control {

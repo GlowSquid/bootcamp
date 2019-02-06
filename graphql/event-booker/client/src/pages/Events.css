@@ -1,8 +1,27 @@
+.head {
+  width: 25rem;
+  margin: 5rem auto;
+}
+
 .events-control {
   text-align: center;
   border: 1px solid #b97d0d;
   padding: 1rem;
-  margin: 2rem auto;
-  width: 30rem;
+  margin: 1rem auto;
+  width: 25rem;
   max-width: 80%;
+}
+
+.events__list {
+  width: 40rem;
+  max-width: 80%;
+  margin: 2rem auto;
+  list-style: none;
+  padding: 0;
+}
+
+.events__list-item {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #b97d0d;
 }

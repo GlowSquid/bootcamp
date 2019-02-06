@@ -28,7 +28,9 @@ const NavBar = props => {
                       <NavLink to="/bookings">Bookings</NavLink>
                     </li>
                     <li>
-                      <button onClick={context.logout}>Log Out</button>
+                      <NavLink to="/auth" onClick={context.logout}>
+                        Log Out
+                      </NavLink>
                     </li>
                   </React.Fragment>
                 )}
