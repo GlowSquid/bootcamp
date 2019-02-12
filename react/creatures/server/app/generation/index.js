@@ -1,6 +1,6 @@
-const Creature = require('./creature');
+const Creature = require('../creature');
 
-const { REFRESH_RATE, SECONDS } = require('./config');
+const { REFRESH_RATE, SECONDS } = require('../config');
 
 const refreshRate = REFRESH_RATE * SECONDS;
 
