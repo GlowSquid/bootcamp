@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+
 import Spinner from '../components/Spinner/Spinner';
 import AuthContext from '../context/auth-context';
-
 import BookingList from '../components/Bookings/BookingList/BookingList';
 
 class BookingsPage extends Component {
@@ -102,7 +102,7 @@ class BookingsPage extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1 className="head">Bookings</h1>
+        {/* <h1 className="head">Bookings</h1> */}
         {this.state.isLoading ? (
           <Spinner />
         ) : (
@@ -110,14 +110,6 @@ class BookingsPage extends Component {
             bookings={this.state.bookings}
             onDelete={this.deleteBookingHandler}
           />
-          // <ul>
-          //   {this.state.bookings.map(booking => (
-          //     <li key={booking._id}>
-          //       {booking.event.title} -{' '}
-          //       {new Date(booking.createdAt).toLocaleDateString()}
-          //     </li>
-          //   ))}
-          // </ul>
         )}
       </React.Fragment>
     );
