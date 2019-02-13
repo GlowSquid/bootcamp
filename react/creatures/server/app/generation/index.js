@@ -26,7 +26,7 @@ class Generation {
       throw new Error(`this gen expirated on ${this.expiration}`);
     }
 
-    return new Creature();
+    return new Creature({ generationId: this.generationId });
   }
 }
 

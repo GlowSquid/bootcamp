@@ -23,7 +23,7 @@ class GenerationEngine {
         this.generation = generation;
         this.generation.generationId = generationId;
 
-        // console.log('new gen', this.generation);
+        console.log('new gen', this.generation);
         this.timer = setTimeout(
           () => this.buildNewGeneration(),
           this.generation.expiration.getTime() - Date.now()
