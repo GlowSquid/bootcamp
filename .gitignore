@@ -6,4 +6,6 @@ build/
 vanilla-js/github-finder/github.js
 react/devconnector/config/keys_dev.js
 react/forms/src/firebase.js
+react/creatures/server/bin/configure_db.sh
+react/creatures/server/secrets/dbConfig.js
 graphql/event-booker/server/nodemon.json
