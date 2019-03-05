@@ -1,11 +1,14 @@
 .vscode/
 .next/
+.cache/
 node_modules/
 build/
+dist/
+
 *package-lock.json
+graphql/event-booker/server/nodemon.json
 vanilla-js/github-finder/github.js
 react/devconnector/config/keys_dev.js
 react/forms/src/firebase.js
 react/creatures/server/bin/configure_db.sh
 react/creatures/server/secrets/dbConfig.js
-graphql/event-booker/server/nodemon.json

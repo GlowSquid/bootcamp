@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "eslint": "^5.13.0",
     "eslint-config-recommended": "^4.0.0",
     "express": "^4.16.4",

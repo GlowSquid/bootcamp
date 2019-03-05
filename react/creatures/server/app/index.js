@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 
 const GenerationEngine = require('./generation/engine');
 const creatureRouter = require('./api/creature');
@@ -9,6 +10,7 @@ const engine = new GenerationEngine();
 
 app.locals.engine = engine;
 
+app.use(cors({ origin: 'http://localhost:1234' }));
 app.use('/creature', creatureRouter);
 app.use('/generation', generationRouter);
 
