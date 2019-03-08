@@ -47,7 +47,10 @@ class Generation extends Component {
     return (
       <div>
         <h3>Generation {generation.generationId}</h3>
-        <h4>Expires on: {new Date(generation.expiration).toString()}</h4>
+        <p>
+          <strong>Expires on: </strong>{' '}
+          {new Date(generation.expiration).toLocaleTimeString()}
+        </p>
       </div>
     );
   }

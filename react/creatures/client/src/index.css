@@ -1,0 +1,22 @@
+body {
+  text-align: center;
+  margin: 10%;
+  font-size: 20px;
+}
+
+.new__creature__listed {
+  width: 60%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.btn {
+  font: inherit;
+  background: #ebb3e8;
+  color: #3a3636;
+  width: 10rem;
+  padding: 5px;
+  border: 1px solid #3a3636;
+  box-shadow: 1px 2px 1px rgba(58, 53, 53, 0.5);
+  margin-bottom: 10px;
+}
