@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 
+import Joke from './Joke';
+import Stories from './Stories';
+
 function App() {
-  const [userQuery, setUserQuery] = useState('');
+  const [userQuery, setUserQuery] = useState('1 eur to usd');
   // const state = useState();
   // const userQuery = state[0];
   // const setUserQuery = state[1]
@@ -32,6 +35,9 @@ function App() {
         />
         <button onClick={searchQuery}>Search</button>
       </div>
+      <hr />
+      <Joke />
+      <Stories />
     </div>
   );
 }
