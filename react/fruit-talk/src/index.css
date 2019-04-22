@@ -1,0 +1,25 @@
+* {
+  width: 400px;
+  padding-top: 10px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-left: 20px;
+}
+
+p {
+  padding: 10px;
+  border-radius: 20px;
+  width: 50%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p.buyer {
+  background-color: #ada6e7;
+  margin: 20px;
+}
+
+p.seller {
+  background-color: #cbd2d6;
+}
