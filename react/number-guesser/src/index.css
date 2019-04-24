@@ -1,0 +1,20 @@
+.container {
+  text-align: center;
+}
+
+h1 {
+  padding-bottom: 5vh;
+}
+
+button {
+  background: green;
+  color: #fff;
+  padding: 1rem;
+  width: 8rem;
+  border: 2px solid #0e770e;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+  background: #0f9c0f;
+}
