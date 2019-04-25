@@ -1,0 +1,62 @@
+.dices {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.dices i {
+  color: #dda95a;
+  font-size: 12em;
+}
+
+.rolling {
+  animation-name: wobble;
+  animation-duration: 1s;
+}
+
+.btn {
+  background-color: #000;
+  width: 15rem;
+  padding: 1.5rem;
+  border: 0px;
+  border-radius: 10px;
+  color: #fff;
+  margin-top: 3rem;
+}
+
+.btn:hover {
+  background-color: #b98c47;
+  cursor: pointer;
+}
+
+@keyframes wobble {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
